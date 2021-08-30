@@ -10,6 +10,7 @@ public class User extends com.tbc.demo.catalog.asynchronization.model.User imple
 
     protected Integer age1;
 
+
     public User() {
     }
 
@@ -21,9 +22,9 @@ public class User extends com.tbc.demo.catalog.asynchronization.model.User imple
     @Override
     public Object clone() {
         User stu = null;
-        try{
-            stu = (User)super.clone();
-        }catch(CloneNotSupportedException e) {
+        try {
+            stu = (User) super.clone();
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         return stu;

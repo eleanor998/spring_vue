@@ -1,6 +1,5 @@
 package com.tbc.demo.catalog.yinlian;
 
-import com.sun.org.apache.regexp.internal.RE;
 import com.tbc.demo.catalog.unionpayLogin.WxCommonSSO;
 import com.tbc.demo.catalog.unionpayLogin.WxCommonTest;
 import lombok.extern.slf4j.Slf4j;

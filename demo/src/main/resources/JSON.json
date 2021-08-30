@@ -1,0 +1,19 @@
+{
+  "companyId": "test1",
+  "departmentId": {
+    "$in": [
+      "987654"
+    ],
+    "$gte": {
+      "$date": 1629388800000
+    },
+    "$lte": {
+      "$date": 1630166400000
+    }
+  },
+  "createDate": {},
+  "staffName": {
+    "$regex": ".*测试.*",
+    "$options": ""
+  }
+}

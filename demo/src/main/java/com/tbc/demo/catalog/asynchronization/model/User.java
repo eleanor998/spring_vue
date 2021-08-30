@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
     private String naeme;
-    private boolean sex;
+    private Boolean sex;
     private int age;
 }

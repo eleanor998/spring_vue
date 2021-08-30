@@ -1,10 +1,6 @@
 package com.tbc.demo.catalog.yinlian;
 
-import com.alibaba.fastjson.JSON;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tbc.demo.utils.RandomUtil;
+import com.tbc.demo.utils.RandomValue;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import redis.clients.jedis.HostAndPort;
@@ -58,7 +54,7 @@ public class PublicLoginTest {
     }
 
     private String createVerifiCode(String phone) {
-        String string = RandomUtil.randomNumString(6);
+        String string = RandomValue.randomNumString(6);
         jedis.set("PUBLICE_LOGIN_VERIFICODE" + phone, string);
         return string;
     }

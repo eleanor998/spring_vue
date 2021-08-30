@@ -1,1 +1,28 @@
-#{id},#{studentUserId},#{crUserId},#{dropTime},#{dropTime},#{updateBy},#{deleted},#{createTime},#{updateTime}
+/**
+     * 部门异动项
+     */
+    DEPARTMENT_CHANGE_ITEM
+/**
+     * 部门路径异动项
+     */
+    DEPARTMENT_PATH_CHANGE_ITEM
+/**
+     * 职位异动项
+     */
+    POSITION_CHANGE_ITEM
+/**
+     * 员工类型异动项
+     */
+    STAFF_TYPECHANGE_ITEM
+/**
+     * 职务分类异动项
+     */
+    JOB_CATEGORY_CHANGE_ITEM
+/**
+     * 职务异动项
+     */
+    JOB_TITLE_CHANGE_ITEM
+/**
+     * 职位级别异动
+     */
+    POSITION_LEVEL_CHANGE_ITEM

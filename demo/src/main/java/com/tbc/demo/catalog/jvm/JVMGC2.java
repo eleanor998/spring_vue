@@ -1,6 +1,5 @@
 package com.tbc.demo.catalog.jvm;
 
-import com.sun.org.apache.regexp.internal.RE;
 import com.tbc.demo.catalog.asynchronization.model.User;
 import jdk.nashorn.internal.ir.debug.ObjectSizeCalculator;
 import lombok.extern.slf4j.Slf4j;
