@@ -215,4 +215,15 @@ public class StreamDemo {
         Map<Integer, List<User>> collect = users.stream().collect(Collectors.groupingBy(User::getAge));
         System.out.println(collect);
     }
+
+    @Test
+    public void getTestData() {
+        List<User> users = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 30; j++) {
+
+            }
+
+        }
+    }
 }

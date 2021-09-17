@@ -6,6 +6,7 @@ import cn.hutool.core.date.DateUtil;
 import com.tbc.demo.common.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
@@ -31,12 +32,13 @@ import java.util.*;
 @Controller
 public class Demo {
 
+    @Value("${spring.application.name}")
+    private String test;
 
     @RequestMapping("demo")
-    @com.tbc.demo.catalog.annotation.Demo
     @ResponseBody
     public String from(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        return "demo";
+        return test;
     }
 
     @Test

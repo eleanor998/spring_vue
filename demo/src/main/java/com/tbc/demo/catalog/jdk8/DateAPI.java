@@ -1,11 +1,19 @@
 package com.tbc.demo.catalog.jdk8;
 
+import cn.hutool.core.date.DateTime;
+import cn.hutool.core.date.DateUtil;
+import com.tbc.demo.catalog.asynchronization.model.User;
 import org.junit.jupiter.api.Test;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.TimeZone;
 
 /**
@@ -93,4 +101,16 @@ public class DateAPI {
         System.out.println(time);
     }
 
+    /**
+     * 测试解析
+     */
+    @Test
+    public void testDate() {
+        System.out.println(String.valueOf(null));
+
+    }
+
+    public Map test(Map<String, Object> map) {
+        return map;
+    }
 }

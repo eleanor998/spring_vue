@@ -1,0 +1,312 @@
+2021-09-17 14:08:07.869 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on ihr-Vostro-3670-China-HDD-Protection with PID 210774 (/home/ihr/IdeaProjects/spring_vue/demo/target/classes started by ihr in /home/ihr/IdeaProjects/spring_vue/demo)
+2021-09-17 14:08:07.872 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2021-09-17 14:08:09.006 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+java.lang.IllegalArgumentException: Could not find class [org.springframework.data.mongodb.MongoDatabaseFactory]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:335)
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:481)
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:401)
+	at org.springframework.core.annotation.TypeMappedAnnotation.asMap(TypeMappedAnnotation.java:286)
+	at org.springframework.core.annotation.AbstractMergedAnnotation.asAnnotationAttributes(AbstractMergedAnnotation.java:193)
+	at org.springframework.core.type.AnnotatedTypeMetadata.getAnnotationAttributes(AnnotatedTypeMetadata.java:106)
+	at org.springframework.context.annotation.AnnotationConfigUtils.attributesFor(AnnotationConfigUtils.java:285)
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.determineBeanNameFromAnnotation(AnnotationBeanNameGenerator.java:98)
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.generateBeanName(AnnotationBeanNameGenerator.java:77)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.registerBeanDefinitionForImportedConfigurationClass(ConfigurationClassBeanDefinitionReader.java:160)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:532)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:22)
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.mongodb.MongoDatabaseFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:285)
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:325)
+	... 27 common frames omitted
+2021-09-17 14:08:51.692 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on ihr-Vostro-3670-China-HDD-Protection with PID 212061 (/home/ihr/IdeaProjects/spring_vue/demo/target/classes started by ihr in /home/ihr/IdeaProjects/spring_vue/demo)
+2021-09-17 14:08:51.695 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2021-09-17 14:08:52.847 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+java.lang.IllegalArgumentException: Could not find class [org.springframework.data.mongodb.MongoDatabaseFactory]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:335)
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:481)
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:401)
+	at org.springframework.core.annotation.TypeMappedAnnotation.asMap(TypeMappedAnnotation.java:286)
+	at org.springframework.core.annotation.AbstractMergedAnnotation.asAnnotationAttributes(AbstractMergedAnnotation.java:193)
+	at org.springframework.core.type.AnnotatedTypeMetadata.getAnnotationAttributes(AnnotatedTypeMetadata.java:106)
+	at org.springframework.context.annotation.AnnotationConfigUtils.attributesFor(AnnotationConfigUtils.java:285)
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.determineBeanNameFromAnnotation(AnnotationBeanNameGenerator.java:98)
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.generateBeanName(AnnotationBeanNameGenerator.java:77)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.registerBeanDefinitionForImportedConfigurationClass(ConfigurationClassBeanDefinitionReader.java:160)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:532)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:22)
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.mongodb.MongoDatabaseFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:285)
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:325)
+	... 27 common frames omitted
+2021-09-17 14:09:32.819 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on ihr-Vostro-3670-China-HDD-Protection with PID 213537 (/home/ihr/IdeaProjects/spring_vue/demo/target/classes started by ihr in /home/ihr/IdeaProjects/spring_vue/demo)
+2021-09-17 14:09:32.822 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2021-09-17 14:09:33.378 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+java.lang.IllegalArgumentException: Could not find class [org.springframework.data.mongodb.MongoDatabaseFactory]
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:335)
+	at org.springframework.core.annotation.TypeMappedAnnotation.adapt(TypeMappedAnnotation.java:481)
+	at org.springframework.core.annotation.TypeMappedAnnotation.getValue(TypeMappedAnnotation.java:401)
+	at org.springframework.core.annotation.TypeMappedAnnotation.asMap(TypeMappedAnnotation.java:286)
+	at org.springframework.core.annotation.AbstractMergedAnnotation.asAnnotationAttributes(AbstractMergedAnnotation.java:193)
+	at org.springframework.core.type.AnnotatedTypeMetadata.getAnnotationAttributes(AnnotatedTypeMetadata.java:106)
+	at org.springframework.context.annotation.AnnotationConfigUtils.attributesFor(AnnotationConfigUtils.java:285)
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.determineBeanNameFromAnnotation(AnnotationBeanNameGenerator.java:98)
+	at org.springframework.context.annotation.AnnotationBeanNameGenerator.generateBeanName(AnnotationBeanNameGenerator.java:77)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.registerBeanDefinitionForImportedConfigurationClass(ConfigurationClassBeanDefinitionReader.java:160)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:141)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:22)
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.mongodb.MongoDatabaseFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:285)
+	at org.springframework.util.ClassUtils.resolveClassName(ClassUtils.java:325)
+	... 25 common frames omitted
+2021-09-17 14:10:52.417 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on ihr-Vostro-3670-China-HDD-Protection with PID 215454 (/home/ihr/IdeaProjects/spring_vue/demo/target/classes started by ihr in /home/ihr/IdeaProjects/spring_vue/demo)
+2021-09-17 14:10:52.419 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2021-09-17 14:10:52.950 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-17 14:10:52.952 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-17 14:10:52.983 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2021-09-17 14:10:53.573 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859053573]毫秒
+2021-09-17 14:10:53.657 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2021-09-17 14:10:53.820 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859053820]毫秒
+2021-09-17 14:10:53.820 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:10:53.821 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859053820]毫秒
+2021-09-17 14:10:53.821 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:10:53.984 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2021-09-17 14:10:53.991 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2021-09-17 14:10:53.992 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2021-09-17 14:10:53.992 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2021-09-17 14:10:54.036 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2021-09-17 14:10:54.036 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 1551 ms
+2021-09-17 14:10:55.476 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-17 14:10:57.515 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mongodb.client.MongoClient]: Factory method 'mongo' threw exception; nested exception is java.lang.NoSuchMethodError: com.mongodb.MongoClientSettings$Builder.uuidRepresentation(Lorg/bson/UuidRepresentation;)Lcom/mongodb/MongoClientSettings$Builder;
+2021-09-17 14:10:57.535 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-09-17 14:10:57.538 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2021-09-17 14:10:57.545 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-09-17 14:10:57.551 [main]: ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40 report -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.autoconfigure.mongo.MongoClientFactorySupport.applyUuidRepresentation(MongoClientFactorySupport.java:85)
+
+The following method did not exist:
+
+    com.mongodb.MongoClientSettings$Builder.uuidRepresentation(Lorg/bson/UuidRepresentation;)Lcom/mongodb/MongoClientSettings$Builder;
+
+The method's class, com.mongodb.MongoClientSettings$Builder, is available from the following locations:
+
+    jar:file:/home/ihr/.m2/repository/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar!/com/mongodb/MongoClientSettings$Builder.class
+
+It was loaded from the following location:
+
+    file:/home/ihr/.m2/repository/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of com.mongodb.MongoClientSettings$Builder
+
+2021-09-17 14:12:01.959 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on ihr-Vostro-3670-China-HDD-Protection with PID 217122 (/home/ihr/IdeaProjects/spring_vue/demo/target/classes started by ihr in /home/ihr/IdeaProjects/spring_vue/demo)
+2021-09-17 14:12:01.966 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2021-09-17 14:12:02.595 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-17 14:12:02.596 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-17 14:12:02.628 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2021-09-17 14:12:03.168 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859123168]毫秒
+2021-09-17 14:12:03.273 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2021-09-17 14:12:03.434 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859123434]毫秒
+2021-09-17 14:12:03.435 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:12:03.435 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859123435]毫秒
+2021-09-17 14:12:03.435 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:12:03.577 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2021-09-17 14:12:03.583 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2021-09-17 14:12:03.584 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2021-09-17 14:12:03.584 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2021-09-17 14:12:03.621 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2021-09-17 14:12:03.621 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 1585 ms
+2021-09-17 14:12:05.018 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-17 14:12:06.803 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mongodb.client.MongoClient]: Factory method 'mongo' threw exception; nested exception is java.lang.NoSuchMethodError: com.mongodb.MongoClientSettings$Builder.uuidRepresentation(Lorg/bson/UuidRepresentation;)Lcom/mongodb/MongoClientSettings$Builder;
+2021-09-17 14:12:06.853 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-09-17 14:12:06.855 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2021-09-17 14:12:06.865 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-09-17 14:12:06.870 [main]: ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40 report -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.autoconfigure.mongo.MongoClientFactorySupport.applyUuidRepresentation(MongoClientFactorySupport.java:85)
+
+The following method did not exist:
+
+    com.mongodb.MongoClientSettings$Builder.uuidRepresentation(Lorg/bson/UuidRepresentation;)Lcom/mongodb/MongoClientSettings$Builder;
+
+The method's class, com.mongodb.MongoClientSettings$Builder, is available from the following locations:
+
+    jar:file:/home/ihr/.m2/repository/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar!/com/mongodb/MongoClientSettings$Builder.class
+
+It was loaded from the following location:
+
+    file:/home/ihr/.m2/repository/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of com.mongodb.MongoClientSettings$Builder
+
+2021-09-17 14:13:20.150 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on ihr-Vostro-3670-China-HDD-Protection with PID 218900 (/home/ihr/IdeaProjects/spring_vue/demo/target/classes started by ihr in /home/ihr/IdeaProjects/spring_vue/demo)
+2021-09-17 14:13:20.153 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2021-09-17 14:13:21.298 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-17 14:13:21.302 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-17 14:13:21.378 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 38ms. Found 0 Redis repository interfaces.
+2021-09-17 14:13:22.653 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859202653]毫秒
+2021-09-17 14:13:22.904 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2021-09-17 14:13:23.122 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859203122]毫秒
+2021-09-17 14:13:23.123 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:13:23.123 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859203123]毫秒
+2021-09-17 14:13:23.123 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:13:23.913 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2021-09-17 14:13:23.943 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2021-09-17 14:13:23.944 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2021-09-17 14:13:23.945 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2021-09-17 14:13:24.338 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2021-09-17 14:13:24.339 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 4113 ms
+2021-09-17 14:13:31.943 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-17 14:13:34.151 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 __refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mongo' defined in class path resource [org/springframework/boot/autoconfigure/mongo/MongoAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.mongodb.client.MongoClient]: Factory method 'mongo' threw exception; nested exception is java.lang.NoSuchMethodError: com.mongodb.MongoClientSettings$Builder.uuidRepresentation(Lorg/bson/UuidRepresentation;)Lcom/mongodb/MongoClientSettings$Builder;
+2021-09-17 14:13:34.185 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2021-09-17 14:13:34.190 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2021-09-17 14:13:34.206 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-09-17 14:13:34.216 [main]: ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter:40 report -  
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.autoconfigure.mongo.MongoClientFactorySupport.applyUuidRepresentation(MongoClientFactorySupport.java:85)
+
+The following method did not exist:
+
+    com.mongodb.MongoClientSettings$Builder.uuidRepresentation(Lorg/bson/UuidRepresentation;)Lcom/mongodb/MongoClientSettings$Builder;
+
+The method's class, com.mongodb.MongoClientSettings$Builder, is available from the following locations:
+
+    jar:file:/home/ihr/.m2/repository/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar!/com/mongodb/MongoClientSettings$Builder.class
+
+It was loaded from the following location:
+
+    file:/home/ihr/.m2/repository/org/mongodb/mongo-java-driver/3.11.2/mongo-java-driver-3.11.2.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of com.mongodb.MongoClientSettings$Builder
+
+2021-09-17 14:13:57.531 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on ihr-Vostro-3670-China-HDD-Protection with PID 220191 (/home/ihr/IdeaProjects/spring_vue/demo/target/classes started by ihr in /home/ihr/IdeaProjects/spring_vue/demo)
+2021-09-17 14:13:57.533 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2021-09-17 14:13:58.053 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-17 14:13:58.054 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-17 14:13:58.080 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2021-09-17 14:13:58.629 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859238629]毫秒
+2021-09-17 14:13:58.703 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2021-09-17 14:13:58.864 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859238864]毫秒
+2021-09-17 14:13:58.864 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:13:58.865 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859238865]毫秒
+2021-09-17 14:13:58.865 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2021-09-17 14:13:59.006 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2021-09-17 14:13:59.012 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2021-09-17 14:13:59.013 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2021-09-17 14:13:59.013 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2021-09-17 14:13:59.049 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2021-09-17 14:13:59.049 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 1451 ms
+2021-09-17 14:14:00.429 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-17 14:14:02.289 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2021-09-17 14:14:02.303 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 start -  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-17 14:14:02.310 [main]: INFO org.springframework.boot.StartupInfoLogger:61 logStarted -  Started DemoApplication in 5.121 seconds (JVM running for 5.642)
+2021-09-17 14:14:31.309 [http-nio-127.0.0.1-8081-exec-1]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-17 14:14:31.309 [http-nio-127.0.0.1-8081-exec-1]: INFO org.springframework.web.servlet.FrameworkServlet:525 initServletBean -  Initializing Servlet 'dispatcherServlet'
+2021-09-17 14:14:31.325 [http-nio-127.0.0.1-8081-exec-1]: INFO org.springframework.web.servlet.FrameworkServlet:547 initServletBean -  Completed initialization in 16 ms
+2021-09-17 14:14:31.341 [http-nio-127.0.0.1-8081-exec-1]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859271341]毫秒
+2021-09-17 14:14:31.341 [http-nio-127.0.0.1-8081-exec-1]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:["spring_vue"]
+2021-09-17 14:14:31.385 [http-nio-127.0.0.1-8081-exec-2]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1631859271385]毫秒
+2021-09-17 14:14:31.385 [http-nio-127.0.0.1-8081-exec-2]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:["/templates/404.html"]
+2021-09-17 14:14:34.813 [SpringContextShutdownHook]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
