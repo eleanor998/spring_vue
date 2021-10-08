@@ -1,4 +1,3 @@
-/*
 package com.tbc.demo.catalog.mongoDB;
 
 import com.mongodb.MongoClient;
@@ -11,17 +10,16 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 @Data
 public class BuliderMongoDB {
 
-*/
-/*    public static final String host = "127.0.0.1";
-    public static final int port = 27017;*//*
+    public static final String host = "127.0.0.1";
+    public static final int port = 27017;
 
 
 
 //    public static final String host = "192.168.1.5";
 //    public static final int port = 27017;
 
-    public static final String host = "192.168.1.210";
-    public static final int port = 27018;
+//    public static final String host = "192.168.1.210";
+//    public static final int port = 27018;
 
     public static final String databaseName = "lina-hr-db";
     public static final String connection = "peopleStatisticsDaily";
@@ -53,4 +51,4 @@ public class BuliderMongoDB {
     public MongoTemplate getMongoTemplate() {
         return new MongoTemplate(new MongoClient(host, port), databaseName);
     }
-}*/
+}

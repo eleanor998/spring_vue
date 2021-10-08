@@ -96,7 +96,7 @@ public class Demo {
     }
 
     public String testParams(String str, String str2, com.tbc.demo.catalog.asynchronization.model.User user) {
-        return str + str2 + user.getNaeme();
+        return str + str2 + user.getUserName();
     }
 
 

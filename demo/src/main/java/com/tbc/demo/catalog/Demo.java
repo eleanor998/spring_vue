@@ -9,6 +9,7 @@ import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import com.tbc.demo.catalog.asynchronization.model.NestedUser;
 import com.tbc.demo.catalog.asynchronization.model.SubUser;
 import com.tbc.demo.catalog.asynchronization.model.User;
+import com.tbc.demo.catalog.extends_test.B;
 import com.tbc.demo.common.model.TagManager;
 import com.tbc.demo.utils.BitStateUtils;
 import com.tbc.demo.utils.BitsMap;
@@ -43,12 +44,8 @@ public class Demo {
 
 
     public static void main(String[] args) {
-        NestedUser nestedUser = new NestedUser();
-        User user = new User();
-        user.setAge(123);
-        nestedUser.setUser(user);
-        user.setAge(321);
-        System.out.println(user.getAge() + "" + nestedUser.getUser().getAge());
+        List<Object> objects = new ArrayList<>(30);
+        System.out.println(objects.size());
     }
 
 
