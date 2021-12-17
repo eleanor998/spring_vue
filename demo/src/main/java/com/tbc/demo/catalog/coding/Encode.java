@@ -1,6 +1,5 @@
 package com.tbc.demo.catalog.coding;
 
-import com.tbc.demo.common.model.User;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;

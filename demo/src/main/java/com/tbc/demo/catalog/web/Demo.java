@@ -3,7 +3,7 @@ package com.tbc.demo.catalog.web;
 
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
-import com.tbc.demo.common.model.User;
+import com.tbc.demo.catalog.asynchronization.model.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;

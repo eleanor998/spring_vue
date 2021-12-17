@@ -1,19 +1,6 @@
 {
-  "companyId": "test1",
-  "departmentId": {
-    "$in": [
-      "987654"
-    ],
-    "$gte": {
-      "$date": 1629388800000
-    },
-    "$lte": {
-      "$date": 1630166400000
-    }
-  },
-  "createDate": {},
-  "staffName": {
-    "$regex": ".*测试.*",
-    "$options": ""
-  }
+  "id": "27cf5adb-a5c2-425a-b659-bdef75325b82",
+  "isVirtual": false,
+  "departmentName": "公司名字全局唯一校验",
+  "preparationNumber": 0
 }

@@ -1,3 +1,4 @@
+/*
 package com.tbc.demo.common.model;
 
 import lombok.Data;
@@ -30,3 +31,4 @@ public class User extends com.tbc.demo.catalog.asynchronization.model.User imple
         return stu;
     }
 }
+*/

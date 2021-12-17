@@ -1,10 +1,11 @@
 package com.tbc.demo.catalog.jdk8;
 
-import com.tbc.demo.common.model.User;
+
+import com.tbc.demo.catalog.asynchronization.model.User;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
-import java.util.concurrent.TimeUnit;
+
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -200,18 +201,6 @@ public class StreamDemo {
     @Test
     public void filterGroupBy() {
         ArrayList<User> users = new ArrayList<>();
-        users.add(new User("张三", 23));
-        users.add(new User("张三1", 23));
-        users.add(new User("张三2", 23));
-        users.add(new User("张三3", 25));
-        users.add(new User("张三4", 23));
-        users.add(new User("张三5", 25));
-        users.add(new User("张三6", 24));
-        users.add(new User("张三7", 21));
-        users.add(new User("张三8", 21));
-        users.add(new User("张三9", 21));
-        users.add(new User("张三10", 22));
-        users.add(new User("张三11", 222));
         Map<Integer, List<User>> collect = users.stream().collect(Collectors.groupingBy(User::getAge));
         System.out.println(collect);
     }

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("exception")
 @Slf4j
 @RestController
-public class Exception {
+public class Exception extends Throwable {
 
     public static void main(String[] args) {
         try {

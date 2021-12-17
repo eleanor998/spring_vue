@@ -1,11 +1,10 @@
 package com.tbc.demo.catalog.jvm;
 
-import com.tbc.demo.common.model.User;
+import com.tbc.demo.catalog.asynchronization.model.User;
 
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
-import java.util.WeakHashMap;
 
 /**
  * 引用类型

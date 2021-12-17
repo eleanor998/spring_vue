@@ -123,7 +123,7 @@ class CGlibProxyUser implements MethodInterceptor {
         Object invoke = null;
         if (method.getName().equals("save")) {
             System.out.println("CGLib 动态代理开始");
-            invoke = methodProxy.invokeSuper(o, objects);
+            invoke = methodProxy.invokeSuper(new User(), objects);
             System.out.println("CGLib 动态代理结束");
         }
 

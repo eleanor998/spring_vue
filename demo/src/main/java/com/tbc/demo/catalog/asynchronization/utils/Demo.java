@@ -1,7 +1,7 @@
 package com.tbc.demo.catalog.asynchronization.utils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.tbc.demo.common.model.User;
+import com.tbc.demo.catalog.asynchronization.model.User;
 import com.tbc.demo.utils.AutoCallable;
 import com.tbc.demo.utils.ThreadsUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,7 @@ public class Demo {
     public static void main(String[] args) throws Exception {
         List<Object> objects = new ArrayList<>();
         User user = new User();
-        user.setUsername("asdf ");
+        user.setUserName("asdf ");
         objects.add(user);
         String s = JSONObject.toJSONString(objects);
         List<Object> demo1 = JSONObject.parseObject(s, objects.getClass());
@@ -65,7 +65,7 @@ public class Demo {
     public List<User> getUsers() {
         User user = new User();
         User user1 = new User();
-        user.setUsername("张三");
+        user.setUserName("张三");
         user.setAge(12);
         List<User> users = Arrays.asList(user, user1);
         return users;
@@ -90,7 +90,7 @@ public class Demo {
     @Test
     public void testInsertParam() throws Exception {
         User user = new User();
-        user.setUsername("张三");
+        user.setUserName("张三");
         Future<String> resutl = ThreadsUtils.autoExecute(new Demo(), "testParams", "参数1_", "参数2_", user);
         log.info(resutl.get());
     }

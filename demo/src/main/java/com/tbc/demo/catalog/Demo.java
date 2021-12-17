@@ -1,51 +1,29 @@
 package com.tbc.demo.catalog;
 
-import cn.hutool.core.date.DateField;
-import cn.hutool.core.date.DateTime;
-import cn.hutool.core.date.DateUtil;
-import cn.hutool.core.util.StrUtil;
+
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-import com.tbc.demo.catalog.asynchronization.model.NestedUser;
-import com.tbc.demo.catalog.asynchronization.model.SubUser;
 import com.tbc.demo.catalog.asynchronization.model.User;
-import com.tbc.demo.catalog.extends_test.B;
-import com.tbc.demo.common.model.TagManager;
-import com.tbc.demo.utils.BitStateUtils;
-import com.tbc.demo.utils.BitsMap;
-import com.tbc.demo.utils.RedisUtils;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.web.embedded.netty.NettyWebServer;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisCluster;
-import redis.clients.jedis.JedisClusterCommand;
-import sun.security.krb5.internal.HostAddress;
+import reactor.core.publisher.Flux;
 
-import javax.websocket.Encoder;
-import java.io.UnsupportedEncodingException;
-import java.net.*;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.*;
-import java.util.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static org.apache.xmlbeans.impl.store.Public2.test;
+import java.io.ObjectStreamClass;
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Slf4j
 public class Demo {
 
 
     public static void main(String[] args) {
-        List<Object> objects = new ArrayList<>(30);
-        System.out.println(objects.size());
+        Map<Object, String> jsonObject = new HashMap<>();
+        jsonObject.put(0L, "CURRENT_DEPARTMENT_AND_CHILDREN");
+        System.out.println(JSONObject.toJSONString(jsonObject));
+
     }
 
 
@@ -53,7 +31,7 @@ public class Demo {
         System.out.println();
         Object parse = JSONObject.parse(JSONObject.toJSONString(user));
         User user1 = JSONObject.parseObject(JSONObject.toJSONString(user), User.class);
-        System.out.println(JSONObject.toJSONString(user1));
+
     }
 
 }
