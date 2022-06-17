@@ -33,7 +33,7 @@
         <spring.boot.version>2.2.6.RELEASE</spring.boot.version>
         <org.mybatis.spring.boot>2.1.0</org.mybatis.spring.boot>
         <org.aspectj.aspectjtools>1.8.5</org.aspectj.aspectjtools>
-        <com.alibaba.fastjson>1.2.54</com.alibaba.fastjson>
+        <com.alibaba.fastjson>1.2.83</com.alibaba.fastjson>
         <org.freemarker>2.3.28</org.freemarker>
         <io.springfox.springfox-swagger2>2.6.1</io.springfox.springfox-swagger2>
         <io.springfox.springfox-swagger-ui>2.6.1</io.springfox.springfox-swagger-ui>
