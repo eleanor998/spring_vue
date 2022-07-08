@@ -6,15 +6,10 @@ import com.tbc.demo.catalog.asynchronization.model.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TimeZone;
+import java.util.*;
 
 /**
  * Java 8通过发布新的Date-Time API (JSR 310)来进一步加强对日期与时间的处理。
@@ -72,6 +67,29 @@ public class DateAPI {
         System.out.println(minutesBetween);     // -239
     }
 
+    /**
+     * // 获取当前年
+     * int year = calendar.get(Calendar.YEAR);
+     * // 获取当前月
+     * int month = calendar.get(Calendar.MONTH) + 1;
+     * // 获取当前日
+     * int day = calendar.get(Calendar.DATE);
+     * // 获取当前小时
+     * int hour = calendar.get(Calendar.HOUR_OF_DAY);
+     * // 获取当前分钟
+     * int minute = calendar.get(Calendar.MINUTE);
+     * // 获取当前秒
+     * int second = calendar.get(Calendar.SECOND);
+     * // 获取当前是本周第几天
+     * int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+     * // 获取当前是本月第几天
+     * int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+     * // 获取当前是本年第几天
+     * int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
+     * ————————————————
+     * 版权声明：本文为CSDN博主「INSIS.」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+     * 原文链接：https://blog.csdn.net/whwhhhh/article/details/123181958
+     */
     @Test
     public void test3() {
         //取得指定时区的时间：　　　　　　
@@ -102,14 +120,73 @@ public class DateAPI {
     }
 
     /**
-     * 测试解析
+     * 测试获取每个月的第一天与最后一天
      */
     @Test
     public void testDate() {
-        System.out.println(String.valueOf(null));
-
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(new Date());
+        int firstDay = instance.getActualMinimum(Calendar.DAY_OF_MONTH);
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.DAY_OF_MONTH, cal.getMinimum(Calendar.DATE));
+        System.out.println("开始时间" + new SimpleDateFormat("yyyy-MM-dd ").format(cal.getTime()));
+        cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DATE));
+        System.out.println("结束时间" + new SimpleDateFormat("yyyy-MM-dd ").format(cal.getTime()));
     }
 
+    /**
+     * 测试获取当月的每一天
+     */
+    @Test
+    public void testDate1() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(Calendar.DAY_OF_MONTH, calendar.getMinimum(Calendar.DATE));
+        System.out.println("开始时间" + new SimpleDateFormat("yyyy-MM-dd ").format(calendar.getTime()));
+        calendar.set(Calendar.DAY_OF_MONTH, calendar.getActualMaximum(Calendar.DATE));
+        System.out.println("结束时间" + new SimpleDateFormat("yyyy-MM-dd ").format(calendar.getTime()));
+        //遍历
+        Calendar instance = Calendar.getInstance();
+        instance.setTime(new Date());
+        instance.set(Calendar.DAY_OF_MONTH, calendar.getMinimum(Calendar.DATE));
+        while (instance.get(Calendar.DATE) != calendar.get(Calendar.DATE)) {
+            Date dateTime = DateUtil.offsetDay(instance.getTime(), 1);
+            instance.setTime(dateTime);
+        }
+    }
+    /**
+     * 测试获取当月的每一天
+     */
+    @Test
+    public void testDate2() {
+        Date start = new Date();
+        DateTime dateTime = DateUtil.offsetDay(new Date(), 2);
+        List<Date> days = getDays(start, dateTime);
+        for (Date day : days) {
+            System.out.println(day);
+        }
+    }
+
+    /**
+     * 获取两个日期之间的所有date
+     * @param start
+     * @param end
+     * @return
+     */
+    private static List<Date> getDays(Date start, Date end) {
+        List<Date> result = new ArrayList<Date>();
+        Calendar tempStart = Calendar.getInstance();
+        tempStart.setTime(start);
+        tempStart.add(Calendar.DAY_OF_YEAR, 1);
+
+        Calendar tempEnd = Calendar.getInstance();
+        tempEnd.setTime(end);
+        while (tempStart.before(tempEnd)) {
+            result.add(tempStart.getTime());
+            tempStart.add(Calendar.DAY_OF_YEAR, 1);
+        }
+        return result;
+    }
     public Map test(Map<String, Object> map) {
         return map;
     }
