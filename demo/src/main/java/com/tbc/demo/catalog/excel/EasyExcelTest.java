@@ -7,14 +7,15 @@ import com.alibaba.excel.write.merge.OnceAbsoluteMergeStrategy;
 import com.alibaba.excel.write.metadata.style.WriteCellStyle;
 import com.alibaba.excel.write.metadata.style.WriteFont;
 import com.alibaba.excel.write.style.HorizontalCellStyleStrategy;
+import com.tbc.demo.entity.User;
 import com.tbc.demo.utils.TestFileUtil;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class EasyExcelTest {
 
@@ -22,8 +23,15 @@ public class EasyExcelTest {
 
 
     public static void main(String[] args) {
-        File file = new File(filePath);
-        setTitle(file);
+        User user = new User();
+        user.setUserName("张三");
+        List<User> users = new ArrayList<>();
+        users.add(user);
+        users.get(0).setUserName("李四");
+        System.out.println(user);
+        Map<String, User> collect = users.stream().collect(Collectors.toMap(User::getUserName, Function.identity()));
+        collect.values().stream().findFirst().get().setUserName("母鸡");
+        System.out.println(user);
     }
 
     public static ExcelWriterBuilder setTitle(File file) {

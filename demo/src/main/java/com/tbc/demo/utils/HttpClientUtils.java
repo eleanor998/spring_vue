@@ -62,6 +62,7 @@ public class HttpClientUtils {
                     str = EntityUtils.toString(result.getEntity(), "utf-8");
                     // 把json字符串转换成json对象
                     jsonResult = JSONObject.parseObject(str);
+                    logger.info(JSONObject.toJSONString(jsonResult));
                 } catch (Exception e) {
                     logger.error("post请求提交失败:" + url, e);
                 }
@@ -88,6 +89,7 @@ public class HttpClientUtils {
         JSONObject jsonResult = null;
         HttpPost httpPost = new HttpPost(url);
         httpPost.setConfig(requestConfig);
+        httpPost.setHeader("Content-Type", "application/json ;charset=utf-8");
         try {
             if (null != strParam) {
                 // 解决中文乱码问题
