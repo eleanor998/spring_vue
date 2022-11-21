@@ -29,7 +29,13 @@ public class MavenInstallLocalhost {
         System.out.println(dependencyCmd);
     }
 
-
+    /**
+     * 打包到本地
+     *
+     * @param dependency maven xml 依赖
+     * @param path       本地jar路径
+     * @return
+     */
     private static String getDependencyCmd(String dependency, String path) {
         if (StringUtils.isEmpty(dependency) || StringUtils.isEmpty(path)) {
             return "";
