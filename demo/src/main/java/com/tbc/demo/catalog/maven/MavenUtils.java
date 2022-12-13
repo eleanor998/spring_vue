@@ -1,13 +1,12 @@
 package com.tbc.demo.catalog.maven;
 
-import com.tbc.demo.catalog.extends_test.B;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MavenInstallLocalhost {
+public class MavenUtils {
     /**
      * maven 依赖
      */
