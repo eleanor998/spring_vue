@@ -1,25 +1,28 @@
 package com.tbc.demo.catalog.forkjoin;
 
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 import java.util.stream.LongStream;
-
+@Slf4j
 public class ForkJoinDemo extends RecursiveTask<Long> {
 
 	private static final long serialVersionUID = -3454048054107103321L;
-	
+
 	//设立一个最大计算容量
 	private final int DEFAULT_CAPACITY = 10000;
-	
+
 	//用2个数字表示目前要计算的范围
     private int start;
     private int end;
-    
+
     public ForkJoinDemo(int start, int end) {
 		this.start = start;
 		this.end = end;
 	}
-    
+
 	@Override
 	protected Long compute() {
 		//分为两种情况进行出来
@@ -41,10 +44,10 @@ public class ForkJoinDemo extends RecursiveTask<Long> {
             //等待任务执行并返回结果
             sum = FockJoinDemo1.join() + FockJoinDemo2.join();
         }
+        log.info(Thread.currentThread().getName() + "");
 
         return sum;
 	}
-
 	public static void main(String[] args) {
 		ForkJoinPool forkJoinPool = new ForkJoinPool();
 		ForkJoinDemo forkJoinDemo = new ForkJoinDemo(1, 1000000000);
@@ -59,12 +62,12 @@ public class ForkJoinDemo extends RecursiveTask<Long> {
             sum += i;
         }
         System.out.println("普通计算结果耗时"+(System.currentTimeMillis() - normalStartTime));
-        
+
         long start = System.currentTimeMillis();
-        
+
         Long sum2 = LongStream.rangeClosed(0L, 10000000000L)
                              .parallel()
-                             .sum();  
+                             .sum();
         long end = System.currentTimeMillis();
         System.out.println("耗费的时间为: " + (end - start));
     }
