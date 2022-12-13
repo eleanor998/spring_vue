@@ -187,34 +187,6 @@ public class DingDingMessageUtils {
         return ObjectSizeCalculator.getObjectSize(obj) < SIZE_LIMIT;
     }
 
-    /**
-     * 拆分子任务
-     *
-     * @param strList 传入所有需要发送的消息，会拆分到可以发送的大小后返回
-     * @return
-     */
-    public static List<String> subTask(List<String> strList) {
-        while (true) {
-            List<String> tempList = new ArrayList<>();
-            Boolean flag = true;
-            for (String s : strList) {
-                if (!sizeOutOf(s)) {
-                    flag = false;
-                    String substring1 = s.substring(0, s.length() / 2);
-                    String substring2 = s.substring(s.length() / 2, s.length() - 1);
-                    tempList.add(substring1);
-                    tempList.add(substring2);
-                } else {
-                    tempList.add(s);
-                }
-                strList = tempList;
-            }
-            if (flag) {
-                break;
-            }
-        }
-        return strList;
-    }
 
     public static void main(String[] args) throws Exception {
         DingDingMessageUtils dingDingMessageUtils = new DingDingMessageUtils("url", "secret");
