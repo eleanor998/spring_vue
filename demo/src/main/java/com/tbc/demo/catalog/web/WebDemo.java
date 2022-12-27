@@ -1,18 +1,10 @@
 package com.tbc.demo.catalog.web;
 
 
-import cn.hutool.core.date.DateTime;
-import cn.hutool.core.date.DateUtil;
-import com.tbc.demo.catalog.asynchronization.model.User;
 import com.tbc.demo.catalog.web.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cglib.proxy.Enhancer;
-import org.springframework.cglib.proxy.MethodInterceptor;
-import org.springframework.cglib.proxy.MethodProxy;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,9 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.lang.reflect.Method;
-import java.util.*;
+import java.io.IOException;
 
 
 /**
@@ -33,9 +23,9 @@ import java.util.*;
  * @date 2019/8/23 13:46
  */
 @Slf4j
-@RequestMapping("demo2")
+@RequestMapping("WebDemo")
 @Controller
-public class Demo {
+public class WebDemo {
 
     @Value("${spring.application.name}")
     private String test;
@@ -44,7 +34,7 @@ public class Demo {
     private DemoService demoService;
 
 
-    @RequestMapping("demo2")
+    @RequestMapping("demo1")
     @ResponseBody
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public String test(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -56,7 +46,6 @@ public class Demo {
     @RequestMapping("demo")
     @ResponseBody
     public String test1(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
         return test;
     }
 

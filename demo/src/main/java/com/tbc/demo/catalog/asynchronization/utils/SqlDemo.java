@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.concurrent.Future;
 
 @Slf4j
-public class Demo {
+public class SqlDemo {
 
     public static void main(String[] args) throws Exception {
         List<Object> objects = new ArrayList<>();
@@ -33,8 +33,8 @@ public class Demo {
      */
     @Test
     public void test() throws Exception {
-        ThreadsUtils.autoExecute(new Demo(), "test3");
-        ThreadsUtils.autoExecute(new Demo(), "test4");
+        ThreadsUtils.autoExecute(new SqlDemo(), "test3");
+        ThreadsUtils.autoExecute(new SqlDemo(), "test4");
         Thread.sleep(10000);
     }
 
@@ -57,7 +57,7 @@ public class Demo {
     @Test
     public void jedisGetToList() throws Exception {
         //测试结果为集合的对象可以直接强转成功
-        List<User> getUsers1 = (List<User>) AutoCallable.execute(new Demo(), "getUsers");
+        List<User> getUsers1 = (List<User>) AutoCallable.execute(new SqlDemo(), "getUsers");
         log.info("{}", getUsers1);
     }
 
@@ -91,7 +91,7 @@ public class Demo {
     public void testInsertParam() throws Exception {
         User user = new User();
         user.setUserName("张三");
-        Future<String> resutl = ThreadsUtils.autoExecute(new Demo(), "testParams", "参数1_", "参数2_", user);
+        Future<String> resutl = ThreadsUtils.autoExecute(new SqlDemo(), "testParams", "参数1_", "参数2_", user);
         log.info(resutl.get());
     }
 

@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 /**
  * stream 流演示
  */
-public class StreamDemo {
+public class StreamSqlDemo {
 
     /**
      * 1.基基本stream流演示
