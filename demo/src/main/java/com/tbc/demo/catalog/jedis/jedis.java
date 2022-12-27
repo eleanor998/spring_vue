@@ -1,18 +1,20 @@
 package com.tbc.demo.catalog.jedis;
 
 
+import cn.hutool.core.util.ZipUtil;
 import com.google.common.collect.Lists;
 import com.tbc.demo.catalog.asynchronization.model.User;
+import com.tbc.demo.catalog.zip.TestString;
 import com.tbc.demo.utils.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.junit.jupiter.api.Test;
-import redis.clients.jedis.HostAndPort;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisCluster;
-import redis.clients.jedis.JedisPool;
+import org.omg.CORBA.portable.OutputStream;
+import redis.clients.jedis.*;
+import redis.clients.jedis.commands.ProtocolCommand;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -33,7 +35,7 @@ public class jedis {
     public static void main(String[] args) throws InterruptedException {
         List<User> menuList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-         User user = User.mockDate();
+            User user = User.mockDate();
         }
         Map<Integer, List<User>> collect = menuList.stream().collect(Collectors.toMap(User::getAge, item -> Lists.newArrayList(item), (List<User> newValueList, List<User> oldValueList) -> {
             oldValueList.addAll(newValueList);
@@ -149,7 +151,6 @@ public class jedis {
      */
     @Test
     public void tset1() throws InterruptedException {
-
         JedisPool jedisPool = new JedisPool("127.0.0.1", 6379);
         System.out.println("活跃数" + jedisPool.getNumActive());
         Jedis resource = jedisPool.getResource();
@@ -162,4 +163,38 @@ public class jedis {
             System.out.println("活跃数" + jedisPool.getNumActive());
         }
     }
+
+    /**
+     * 测试数据储存占用空间
+     */
+    @Test
+    public void tset2() {
+        Jedis jedis = new JedisPool("127.0.0.1", 6379).getResource();
+        jedis.set("test", TestString.content);
+        jedis.set("test1".getBytes(), TestString.content.getBytes(StandardCharsets.UTF_8));
+        byte[] gzip = ZipUtil.gzip(TestString.content, StandardCharsets.UTF_8.name());
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        File zip = ZipUtil.zip(TestString.content);
+        jedis.set("test2".getBytes(), gzip);
+    }
+
+
+    /**
+     * Jedis 统计api
+     */
+    @Test
+    public void tset3() {
+        Jedis jedis = new JedisPool("127.0.0.1", 6379).getResource();
+        for (int i = 0; i < 100; i++) {
+            jedis.pfadd("user1", "a" + i);
+            if (i % 5 == 0) {
+                jedis.pfadd("user","a");
+            }
+        }
+        System.out.println(jedis.pfcount("user1"));
+        System.out.println(jedis.pfcount("user"));
+
+    }
+
+
 }

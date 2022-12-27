@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 /**
  * created by gkk
  *
- * @description: Ó¦ÓÃ³¡¾°£º»ùÓÚÈÎÎñÃÜ¼¯ĞÍ´¦Àí£»Ò»´ÎĞÔ¶à¸öÈÎÎñ£¨ÈÎÎñÏà¶Ô±È½Ï´ó£©
+ * @description: åº”ç”¨åœºæ™¯ï¼šåŸºäºä»»åŠ¡å¯†é›†å‹å¤„ç†ï¼›ä¸€æ¬¡æ€§å¤šä¸ªä»»åŠ¡ï¼ˆä»»åŠ¡ç›¸å¯¹æ¯”è¾ƒå¤§ï¼‰
  */
 public class WorkEventListener<T, S extends EventSource<T>> extends AbstractEventListener<T, S> {
 
@@ -19,7 +19,7 @@ public class WorkEventListener<T, S extends EventSource<T>> extends AbstractEven
     private Consumer<S> consumer;
 
     public WorkEventListener( Consumer<S> consumer ) {
-        //ÕâÀï²»Ò»¶¨ÒªÊ¹ÓÃÄ¬ÈÏµÄÏß³Ì³Ø£¬¸ù¾İÒµÎñĞèÇó¶¨Òå
+        //è¿™é‡Œä¸ä¸€å®šè¦ä½¿ç”¨é»˜è®¤çš„çº¿ç¨‹æ± ï¼Œæ ¹æ®ä¸šåŠ¡éœ€æ±‚å®šä¹‰
         threadPool = ThreadPool.DEFAULT_THREAD_POOL;
         this.consumer = Objects.requireNonNull(consumer, "consumer is undefined");
     }

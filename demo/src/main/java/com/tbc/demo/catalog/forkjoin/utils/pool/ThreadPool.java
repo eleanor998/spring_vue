@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * created by gkk
  *
- * @description: ÃèÊö
+ * @description: æè¿°
  */
 public final class ThreadPool {
 

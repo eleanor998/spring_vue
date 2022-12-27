@@ -192,11 +192,13 @@
             <artifactId>ucloud-sdk-java-usms</artifactId>
             <version>0.8.4.2-release</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
         <dependency>
             <groupId>cn.hutool</groupId>
-            <artifactId>hutool-core</artifactId>
-            <version>5.4.3</version>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.10</version>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

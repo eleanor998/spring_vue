@@ -4,7 +4,7 @@ import java.util.EventObject;
 
 /**
  * @author gkk
- * @description: �¼�Դ
+ * @description: 事件源
  */
 public class EventSource<T> extends EventObject {
 

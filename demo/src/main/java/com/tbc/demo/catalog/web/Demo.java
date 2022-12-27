@@ -4,13 +4,18 @@ package com.tbc.demo.catalog.web;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import com.tbc.demo.catalog.asynchronization.model.User;
+import com.tbc.demo.catalog.web.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -28,71 +33,31 @@ import java.util.*;
  * @date 2019/8/23 13:46
  */
 @Slf4j
-@RequestMapping("demo")
+@RequestMapping("demo2")
 @Controller
 public class Demo {
 
     @Value("${spring.application.name}")
     private String test;
 
+    @Autowired
+    private DemoService demoService;
+
+
+    @RequestMapping("demo2")
+    @ResponseBody
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public String test(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        demoService.save("INSERT INTO `test`.`tab_tree_test`(`x`, `y`, `z`, `name`) VALUES (1, 1, 1, '1')");
+        demoService.update("INSERT INTO `test`.`tab_tree_test`(`x`, `y`, `z`, `name`) VALUES (2, 2, 2, '2')");
+        return "123";
+    }
+
     @RequestMapping("demo")
     @ResponseBody
-    public String from(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public String test1(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
         return test;
     }
 
-    @Test
-    public void test() {
-        DateTime dateTime = DateUtil.beginOfDay(new Date());
-        System.out.println(dateTime);
-    }
-
-    private List<List<User>> getUserlist() {
-        List<List<User>> objects = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            List<User> objects1 = new ArrayList<>();
-            for (int j = 0; j < 10; j++) {
-                User user = new User();
-                objects1.add(user);
-            }
-            objects.add(objects1);
-        }
-        return objects;
-    }
-
-
-    class CGlibProxyUser implements MethodInterceptor {
-
-        private Object targetObject;
-
-        //获取代理理对象,绑定代理
-        public <T> T newProxyInstance(Object targetObject) {
-            this.targetObject = targetObject;
-            return (T) Enhancer.create(targetObject.getClass(), this);
-        }
-
-        /**
-         * 重写需要代理的代理方法
-         *
-         * @param o
-         * @param method
-         * @param objects
-         * @param methodProxy
-         * @return
-         * @throws Throwable
-         */
-        @Override
-        public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-            Object invoke = null;
-            if (method.getName().equals("getUsername")) {
-                System.out.println("CGLib 动态代理开始");
-                invoke = methodProxy.invokeSuper(o, objects);
-                System.out.println("CGLib 动态代理结束");
-            }
-
-            return invoke;
-        }
-
-
-    }
 }

@@ -10,17 +10,17 @@ public class MavenUtils {
     /**
      * maven 依赖
      */
-    private static final String DEPENDENCY = "<!-- https://mvnrepository.com/artifact/com.gitee.jd-platform-opensource/asyncTool -->\n" +
+    private static final String DEPENDENCY = "<!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->\n" +
             "<dependency>\n" +
-            "    <groupId>com.gitee.jd-platform-opensource</groupId>\n" +
-            "    <artifactId>asyncTool</artifactId>\n" +
-            "    <version>V1.4-22388ae880-1</version>\n" +
+            "    <groupId>cn.hutool</groupId>\n" +
+            "    <artifactId>hutool-all</artifactId>\n" +
+            "    <version>5.8.10</version>\n" +
             "</dependency>\n";
 
     /**
      * 本地jar路径
      */
-    private static final String JAR_PATH = "C:\\Users\\Andy Zhang\\Desktop\\asyncTool-V1.4-22388ae880-1.jar";
+    private static final String JAR_PATH = "C:\\Users\\Andy Zhang\\Desktop\\hutool-all-5.8.10.jar";
 
 
     public static void main(String[] args) throws IOException, InterruptedException {
