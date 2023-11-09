@@ -187,18 +187,18 @@
             <artifactId>easyexcel</artifactId>
             <version>2.2.6</version>
         </dependency>
-<!--         mongodb_____start
-         https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
+        <!--         mongodb_____start
+                 https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+                <dependency>
+                    <groupId>org.mongodb</groupId>
+                    <artifactId>mongo-java-driver</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+                </dependency>
 
-         mongodb_____end-->
+                 mongodb_____end-->
         <!--  钉钉群消息   -->
         <dependency>
             <groupId>com.aliyun</groupId>
@@ -214,10 +214,44 @@
         </dependency>
         <!--京东线程编排-->
         <!-- https://mvnrepository.com/artifact/com.gitee.jd-platform-opensource/asyncTool -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.gitee.jd-platform-opensource</groupId>-->
+        <!--            <artifactId>asyncTool</artifactId>-->
+        <!--            <version>V1.4-22388ae880-1</version>-->
+        <!--        </dependency>-->
+        <!-- Jackson JSON processing library -->
+        <!-- MySQL 驱动 -->
         <dependency>
-            <groupId>com.gitee.jd-platform-opensource</groupId>
-            <artifactId>asyncTool</artifactId>
-            <version>V1.4-22388ae880-1</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.lianlu</groupId>
+            <artifactId>lianlu-sdk-java</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao</groupId>
+            <artifactId>taobao-sdk</artifactId>
+            <version>20201116</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao.top</groupId>
+            <artifactId>top-api-sdk</artifactId>
+            <version>20230823</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao</groupId>
+            <artifactId>taobao-sdk-java-auto</artifactId>
+            <version>20230814</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.3.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

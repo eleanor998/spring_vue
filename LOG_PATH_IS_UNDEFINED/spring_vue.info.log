@@ -1,3 +1,754 @@
-2022-12-29 09:56:36.897 [SpringContextShutdownHook]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
-2022-12-29 09:56:37.622 [SpringContextShutdownHook]: INFO com.zaxxer.hikari.HikariDataSource:350 close -  HikariPool-1 - Shutdown initiated...
-2022-12-29 09:56:38.149 [SpringContextShutdownHook]: INFO com.zaxxer.hikari.HikariDataSource:352 close -  HikariPool-1 - Shutdown completed.
+2023-11-09 11:23:12.768 [background-preinit]: WARN org.springframework.core.log.CompositeLog:127 warn -  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-11-09 11:23:12.910 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on DESKTOP-9PVI8N3 with PID 17212 (C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes started by 54453 in C:\Users\54453\IdeaProjects\spring_vue)
+2023-11-09 11:23:12.911 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2023-11-09 11:23:14.568 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-11-09 11:23:14.573 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-09 11:23:14.736 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 100ms. Found 0 Redis repository interfaces.
+2023-11-09 11:23:15.043 [main]: WARN org.mybatis.logging.Logger:44 warn -  No MyBatis mapper was found in '[com.tbc.demo]' package. Please check your configuration.
+2023-11-09 11:23:16.212 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699500196212]毫秒
+2023-11-09 11:23:16.469 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2023-11-09 11:23:17.132 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699500197132]毫秒
+2023-11-09 11:23:17.134 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 11:23:17.136 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699500197136]毫秒
+2023-11-09 11:23:17.136 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 11:23:18.175 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2023-11-09 11:23:18.244 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2023-11-09 11:23:18.245 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2023-11-09 11:23:18.246 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2023-11-09 11:23:18.643 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2023-11-09 11:23:18.644 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 5655 ms
+2023-11-09 11:23:20.066 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 11:23:20.681 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 __refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+2023-11-09 11:23:20.681 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-09 11:23:20.686 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2023-11-09 11:23:20.698 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-09 11:23:20.714 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:550)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:41002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:42008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 22 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:576)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:445)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:609)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:218)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:573)
+	... 31 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(XMLDocumentScannerImpl.java:1157)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(XMLDocumentScannerImpl.java:1045)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:959)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 34 common frames omitted
+2023-11-09 11:23:20.724 [main]: WARN org.springframework.boot.SpringApplication:819 handleRunFailure -  Unable to close ApplicationContext
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:808)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 40 common frames omitted
+2023-11-09 13:19:09.269 [background-preinit]: WARN org.springframework.core.log.CompositeLog:127 warn -  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-11-09 13:19:09.383 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on DESKTOP-9PVI8N3 with PID 22712 (C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes started by 54453 in C:\Users\54453\IdeaProjects\spring_vue)
+2023-11-09 13:19:09.384 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2023-11-09 13:19:10.945 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-11-09 13:19:10.949 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-09 13:19:11.090 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 90ms. Found 0 Redis repository interfaces.
+2023-11-09 13:19:11.389 [main]: WARN org.mybatis.logging.Logger:44 warn -  No MyBatis mapper was found in '[com.tbc.demo]' package. Please check your configuration.
+2023-11-09 13:19:12.465 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507152465]毫秒
+2023-11-09 13:19:12.683 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2023-11-09 13:19:12.847 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507152847]毫秒
+2023-11-09 13:19:12.847 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:19:12.847 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507152847]毫秒
+2023-11-09 13:19:12.848 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:19:13.168 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2023-11-09 13:19:13.201 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2023-11-09 13:19:13.202 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2023-11-09 13:19:13.203 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2023-11-09 13:19:13.437 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2023-11-09 13:19:13.438 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 3983 ms
+2023-11-09 13:19:14.904 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:19:15.484 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 __refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+2023-11-09 13:19:15.485 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:19:15.490 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2023-11-09 13:19:15.501 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-09 13:19:15.516 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:550)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:41002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:42008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 22 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:576)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:445)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:609)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:218)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:573)
+	... 31 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(XMLDocumentScannerImpl.java:1157)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(XMLDocumentScannerImpl.java:1045)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:959)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 34 common frames omitted
+2023-11-09 13:19:15.522 [main]: WARN org.springframework.boot.SpringApplication:819 handleRunFailure -  Unable to close ApplicationContext
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:808)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 40 common frames omitted
+2023-11-09 13:22:01.444 [background-preinit]: WARN org.springframework.core.log.CompositeLog:127 warn -  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-11-09 13:22:01.585 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on DESKTOP-9PVI8N3 with PID 16908 (C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes started by 54453 in C:\Users\54453\IdeaProjects\spring_vue)
+2023-11-09 13:22:01.586 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2023-11-09 13:22:03.335 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-11-09 13:22:03.351 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-09 13:22:03.485 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 86ms. Found 0 Redis repository interfaces.
+2023-11-09 13:22:03.777 [main]: WARN org.mybatis.logging.Logger:44 warn -  No MyBatis mapper was found in '[com.tbc.demo]' package. Please check your configuration.
+2023-11-09 13:22:04.835 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507324835]毫秒
+2023-11-09 13:22:05.040 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2023-11-09 13:22:05.228 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507325228]毫秒
+2023-11-09 13:22:05.228 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:22:05.229 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507325229]毫秒
+2023-11-09 13:22:05.229 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:22:05.536 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2023-11-09 13:22:05.571 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2023-11-09 13:22:05.572 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2023-11-09 13:22:05.573 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2023-11-09 13:22:05.819 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2023-11-09 13:22:05.820 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 4150 ms
+2023-11-09 13:22:07.165 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:22:07.663 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 __refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+2023-11-09 13:22:07.664 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:22:07.668 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2023-11-09 13:22:07.678 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-09 13:22:07.693 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:550)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:41002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:42008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 22 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:576)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:445)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:609)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:218)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:573)
+	... 31 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(XMLDocumentScannerImpl.java:1157)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(XMLDocumentScannerImpl.java:1045)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:959)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 34 common frames omitted
+2023-11-09 13:22:07.697 [main]: WARN org.springframework.boot.SpringApplication:819 handleRunFailure -  Unable to close ApplicationContext
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:808)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 40 common frames omitted
+2023-11-09 13:27:40.844 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on DESKTOP-9PVI8N3 with PID 8588 (C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes started by 54453 in C:\Users\54453\IdeaProjects\spring_vue)
+2023-11-09 13:27:40.846 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2023-11-09 13:27:41.030 [background-preinit]: WARN org.springframework.core.log.CompositeLog:127 warn -  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-11-09 13:27:42.906 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-11-09 13:27:42.913 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-09 13:27:43.091 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 145ms. Found 0 Redis repository interfaces.
+2023-11-09 13:27:43.469 [main]: WARN org.mybatis.logging.Logger:44 warn -  No MyBatis mapper was found in '[com.tbc.demo]' package. Please check your configuration.
+2023-11-09 13:27:45.023 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507665022]毫秒
+2023-11-09 13:27:45.140 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2023-11-09 13:27:45.297 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507665297]毫秒
+2023-11-09 13:27:45.297 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:27:45.297 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699507665297]毫秒
+2023-11-09 13:27:45.298 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:27:45.574 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2023-11-09 13:27:45.591 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2023-11-09 13:27:45.592 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2023-11-09 13:27:45.592 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2023-11-09 13:27:45.829 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2023-11-09 13:27:45.829 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 4844 ms
+2023-11-09 13:27:47.444 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:27:48.080 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 __refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+2023-11-09 13:27:48.081 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:27:48.086 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2023-11-09 13:27:48.100 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-09 13:27:48.112 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:550)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:41002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:42008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 22 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:576)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:445)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:609)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:218)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 4; columnNumber: 67; 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:573)
+	... 31 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 外部 DTD: 无法读取外部 DTD 'mybatis-generator-config_1_0.dtd', 因为 accessExternalDTD 属性设置的限制导致不允许 'http' 访问。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.dispatch(XMLDocumentScannerImpl.java:1157)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$DTDDriver.next(XMLDocumentScannerImpl.java:1045)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:959)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 34 common frames omitted
+2023-11-09 13:27:48.117 [main]: WARN org.springframework.boot.SpringApplication:819 handleRunFailure -  Unable to close ApplicationContext
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:808)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 40 common frames omitted
+2023-11-09 13:56:21.860 [background-preinit]: WARN org.springframework.core.log.CompositeLog:127 warn -  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-11-09 13:56:21.969 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on DESKTOP-9PVI8N3 with PID 5444 (C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes started by 54453 in C:\Users\54453\IdeaProjects\spring_vue)
+2023-11-09 13:56:21.970 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2023-11-09 13:56:23.608 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-11-09 13:56:23.614 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-09 13:56:23.755 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 90ms. Found 0 Redis repository interfaces.
+2023-11-09 13:56:24.042 [main]: WARN org.mybatis.logging.Logger:44 warn -  No MyBatis mapper was found in '[com.tbc.demo]' package. Please check your configuration.
+2023-11-09 13:56:25.039 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699509385039]毫秒
+2023-11-09 13:56:25.242 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2023-11-09 13:56:25.417 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699509385417]毫秒
+2023-11-09 13:56:25.417 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:56:25.417 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699509385417]毫秒
+2023-11-09 13:56:25.418 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:56:25.696 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2023-11-09 13:56:25.730 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2023-11-09 13:56:25.730 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2023-11-09 13:56:25.731 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2023-11-09 13:56:25.951 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2023-11-09 13:56:25.951 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 3906 ms
+2023-11-09 13:56:27.237 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:56:29.846 [main]: WARN org.springframework.context.support.AbstractApplicationContext:558 __refresh -  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'. Cause: java.lang.NullPointerException
+2023-11-09 13:56:29.847 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 shutdown -  Shutting down ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:56:29.852 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Stopping service [Tomcat]
+2023-11-09 13:56:29.863 [main]: INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:136 logMessage -  
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-11-09 13:56:29.878 [main]: ERROR org.springframework.boot.SpringApplication:837 reportFailure -  Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'. Cause: java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:550)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:41002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:42008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'. Cause: java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 22 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'. Cause: java.lang.NullPointerException
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:576)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:445)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:609)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:218)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes\mapper\generatorConfig.xml]'. Cause: java.lang.NullPointerException
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:574)
+	... 31 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:111)
+	... 33 common frames omitted
+2023-11-09 13:56:29.882 [main]: WARN org.springframework.boot.SpringApplication:819 handleRunFailure -  Unable to close ApplicationContext
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:245)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:197)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:81)
+	at org.springframework.boot.availability.AvailabilityChangeEvent.publish(AvailabilityChangeEvent.java:67)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:167)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:814)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:325)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.tbc.demo.DemoApplication.main(DemoApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:109)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:251)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1141)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:506)
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:808)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:297)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor.postProcessBeforeInitialization(ConfigurationClassPostProcessor.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
+	... 40 common frames omitted
+2023-11-09 13:57:43.018 [background-preinit]: WARN org.springframework.core.log.CompositeLog:127 warn -  For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2023-11-09 13:57:43.192 [main]: INFO org.springframework.boot.StartupInfoLogger:55 logStarting -  Starting DemoApplication on DESKTOP-9PVI8N3 with PID 25720 (C:\Users\54453\IdeaProjects\spring_vue\demo\target\classes started by 54453 in C:\Users\54453\IdeaProjects\spring_vue)
+2023-11-09 13:57:43.194 [main]: INFO org.springframework.boot.SpringApplication:651 logStartupProfileInfo -  No active profile set, falling back to default profiles: default
+2023-11-09 13:57:45.170 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:249 multipleStoresDetected -  Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-11-09 13:57:45.175 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:127 registerRepositoriesIn -  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-11-09 13:57:45.324 [main]: INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate:187 registerRepositoriesIn -  Finished Spring Data repository scanning in 98ms. Found 0 Redis repository interfaces.
+2023-11-09 13:57:45.652 [main]: WARN org.mybatis.logging.Logger:44 warn -  No MyBatis mapper was found in '[com.tbc.demo]' package. Please check your configuration.
+2023-11-09 13:57:46.758 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699509466758]毫秒
+2023-11-09 13:57:46.981 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[{}]
+2023-11-09 13:57:47.164 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699509467164]毫秒
+2023-11-09 13:57:47.165 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:57:47.165 [main]: INFO com.tbc.demo.common.LoggerAop:41 afterReturningPrintLog -  ##########   方法执行总时长:[1699509467165]毫秒
+2023-11-09 13:57:47.165 [main]: INFO com.tbc.demo.common.LoggerAop:53 exAfterReturning -  ##########   执行返回值:[null]
+2023-11-09 13:57:47.466 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 initialize -  Tomcat initialized with port(s): 8081 (http)
+2023-11-09 13:57:47.501 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2023-11-09 13:57:47.502 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting service [Tomcat]
+2023-11-09 13:57:47.502 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting Servlet engine: [Apache Tomcat/9.0.35]
+2023-11-09 13:57:47.755 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Initializing Spring embedded WebApplicationContext
+2023-11-09 13:57:47.755 [main]: INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:284 prepareWebApplicationContext -  Root WebApplicationContext: initialization completed in 4439 ms
+2023-11-09 13:57:49.164 [main]: INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 initialize -  Initializing ExecutorService 'applicationTaskExecutor'
+2023-11-09 13:57:51.508 [main]: INFO org.quartz.impl.StdSchedulerFactory:1220 instantiate -  Using default implementation for ThreadExecutor
+2023-11-09 13:57:51.531 [main]: INFO org.quartz.core.SchedulerSignalerImpl:61 <init> -  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-11-09 13:57:51.531 [main]: INFO org.quartz.core.QuartzScheduler:229 <init> -  Quartz Scheduler v.2.3.2 created.
+2023-11-09 13:57:51.534 [main]: INFO org.quartz.simpl.RAMJobStore:155 initialize -  RAMJobStore initialized.
+2023-11-09 13:57:51.536 [main]: INFO org.quartz.core.QuartzScheduler:294 initialize -  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-11-09 13:57:51.536 [main]: INFO org.quartz.impl.StdSchedulerFactory:1374 instantiate -  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2023-11-09 13:57:51.536 [main]: INFO org.quartz.impl.StdSchedulerFactory:1378 instantiate -  Quartz scheduler version: 2.3.2
+2023-11-09 13:57:51.536 [main]: INFO org.quartz.core.QuartzScheduler:2293 setJobFactory -  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2bab3d1c
+2023-11-09 13:57:51.637 [main]: INFO org.apache.juli.logging.DirectJDKLog:173 log -  Starting ProtocolHandler ["http-nio-127.0.0.1-8081"]
+2023-11-09 13:57:51.679 [main]: INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 start -  Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-09 13:57:51.681 [main]: INFO org.springframework.scheduling.quartz.SchedulerFactoryBean:727 startScheduler -  Starting Quartz Scheduler now
+2023-11-09 13:57:51.681 [main]: INFO org.quartz.core.QuartzScheduler:547 start -  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2023-11-09 13:57:51.691 [main]: INFO org.springframework.boot.StartupInfoLogger:61 logStarted -  Started DemoApplication in 10.255 seconds (JVM running for 15.479)

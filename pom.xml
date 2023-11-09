@@ -31,7 +31,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring.boot.version>2.2.6.RELEASE</spring.boot.version>
-        <org.mybatis.spring.boot>2.1.0</org.mybatis.spring.boot>
+        <mybatis-plus-boot-starter>3.5.2</mybatis-plus-boot-starter>
         <org.aspectj.aspectjtools>1.8.5</org.aspectj.aspectjtools>
         <com.alibaba.fastjson>1.2.54</com.alibaba.fastjson>
         <org.freemarker>2.3.28</org.freemarker>
@@ -80,7 +80,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -95,10 +95,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${org.mybatis.spring.boot}</version>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot-starter}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

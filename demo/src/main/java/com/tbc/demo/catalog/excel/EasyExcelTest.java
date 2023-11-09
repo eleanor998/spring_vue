@@ -2,15 +2,12 @@ package com.tbc.demo.catalog.excel;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.write.builder.ExcelWriterBuilder;
-import com.alibaba.excel.write.merge.LoopMergeStrategy;
 import com.alibaba.excel.write.merge.OnceAbsoluteMergeStrategy;
 import com.alibaba.excel.write.metadata.style.WriteCellStyle;
 import com.alibaba.excel.write.metadata.style.WriteFont;
 import com.alibaba.excel.write.style.HorizontalCellStyleStrategy;
-import com.tbc.demo.entity.User;
-import com.tbc.demo.utils.TestFileUtil;
+import com.tbc.demo.catalog.asynchronization.model.User;
 import org.apache.poi.ss.usermodel.IndexedColors;
-import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.util.*;

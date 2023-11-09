@@ -1,17 +1,20 @@
 package com.tbc.demo.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.Date;
 
 public class User {
     private String id;
 
+    @JSONField
     private String userName;
 
     private String password;
 
     private String userEmail;
 
-    private Long mobileNo;
+    private long mobileNo;
 
     private String userRoles;
 
