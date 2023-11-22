@@ -1,19 +1,16 @@
 package com.tbc.demo.catalog.groovy;
 
 import cn.hutool.crypto.digest.DigestUtil;
-import cn.hutool.crypto.digest.MD5;
 import com.google.common.cache.*;
-import com.tbc.demo.utils.MD5Generator;
+import com.tbc.demo.catalog.asynchronization.model.User;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
-import org.apache.tomcat.util.security.MD5Encoder;
 import org.codehaus.groovy.ast.stmt.Statement;
 import org.codehaus.groovy.ast.stmt.WhileStatement;
 import org.codehaus.groovy.control.CompilationFailedException;
 import org.codehaus.groovy.control.CompilerConfiguration;
 import org.codehaus.groovy.control.customizers.SecureASTCustomizer;
 
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -32,26 +29,7 @@ public class GroovyUtils {
         createGuavaCache();
     }
 
-    private static String script = "package com.tbc.demo.catalog.groovy\n" +
-            "\n" +
-            "import com.alibaba.fastjson.JSONObject\n" +
-            "import com.tbc.demo.entity.User\n" +
-            "\n" +
-            "/**\n" +
-            " * idea 可直接新建groovy类型文件\n" +
-            " */\n" +
-            "class Script {\n" +
-            "\n" +
-            "    static String hello(String args) {\n" +
-            "        def user = new User()\n" +
-            "        return JSONObject.toJSONString(user) + args\n" +
-            "    }\n" +
-            "}\n";
 
-    public static void main(String[] args) throws Exception {
-        String run = run(script, "hello", "这个是入参");
-        System.out.println(run);
-    }
 
     /**
      * 解析成指定类手动执行方法
