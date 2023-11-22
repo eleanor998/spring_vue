@@ -1,3 +1,8 @@
-{
-  "code": 1
-}
+[
+  {
+    "excelFieldName": "订单号",
+    "fieldConfig": {
+      "fieldName": "orderId"
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "excelFieldName": "订单号",
+    "fieldConfig": {
+      "fieldName": "orderId"
+    }
+  },
+  {
+    "excelFieldName": "姓名",
+    "fieldConfig": {
+      "fieldName": "vaccineName"
+    }
+  },
+  {
+    "excelFieldName": "手机号",
+    "fieldConfig": {
+      "fieldName": "vaccinePhone"
+    }
+  },
+  {
+    "excelFieldName": "sku ID",
+    "fieldConfig": {
+      "fieldName": "skuId"
+    }
+  },
+  {
+    "excelFieldName": "",
+    "fieldConfig": {
+      "fieldName": "appointmentPeriod",
+      "notNull": false
+    }
+  },
+  {
+    "excelFieldName": "性别",
+    "fieldConfig": {
+      "fieldFormatConfig": "",
+      "fieldName": "customGender",
+      "fieldMappingConfig": "{\"男\":1,\"女\":0,\"未知\":2,\"null\":2,\"\":2}"
+    }
+  },
+  {
+    "excelFieldName": "身份证号",
+    "fieldConfig": {
+      "fieldName": "idNumber"
+    }
+  },
+  {
+    "excelFieldName": "出生年月日",
+    "fieldConfig": {
+      "fieldFormatConfig": "(\\d{4})\\/(\\d{2})\\/(\\d{2}$)",
+      "fieldName": "customBirthdate"
+    }
+  },
+  {
+    "excelFieldName": "接种门店名称",
+    "fieldConfig": {
+      "fieldName": "vaccineStoreName"
+    }
+  },
+  {
+    "excelFieldName": "最新预约备注",
+    "fieldConfig": {
+      "fieldName": "remarks",
+      "notNull": false
+    }
+  },
+  {
+    "excelFieldName": "预约时间",
+    "fieldConfig": {
+      "fieldFormatConfig": "(\\d{4})-(\\d{2})-(\\d{2})",
+      "fieldName": "appointmentTime"
+    }
+  }
+]
