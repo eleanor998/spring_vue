@@ -38,7 +38,7 @@
         <io.springfox.springfox-swagger2>2.6.1</io.springfox.springfox-swagger2>
         <io.springfox.springfox-swagger-ui>2.6.1</io.springfox.springfox-swagger-ui>
         <redis.clients.jedis>2.9.3</redis.clients.jedis>
-        <junit>4.12</junit>
+        <junit>4.13.1</junit>
         <javase_version>1.8</javase_version>
         <project_build_sourceEncoding>UTF-8</project_build_sourceEncoding>
     </properties>
